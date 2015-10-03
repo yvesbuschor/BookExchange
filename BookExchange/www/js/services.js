@@ -1,7 +1,7 @@
 angular.module('bookexchange')
 
 .service('bookApi', function($http, $q){
-	var LOCAL_TOKEN = "myToken";
+	var LOCAL_TOKEN = "bookexchangeToken";
 	var isAuthenticated = false;
 	var authToken;
 
@@ -30,7 +30,31 @@ angular.module('bookexchange')
 		window.localStorage.removeItem(LOCAL_TOKEN);
 	}
 
+	var login = function(loginData) {
+		return $q(function(resolve, reject) {
+;        $http.post("http://bookexchange.scapp.io/gettoken", loginData).success(function(data, status) {
+  
+				if(data.token){
+					storeUserCredentials(token);
+					resolve('Login successful');
+				} else {
+					reject('login failed');
+				}
+			}, function(){
+				reject('login failed');
+			});
+		});
+	};
 
+	var logout = function() {
+		destroyToken();
+	};
 
+	loadUserCredentials();
 
-});
+	return {
+		login: login,
+		logout: logout,
+		isAuthenticated: function() {return isAuthenticated}
+	};
+})
