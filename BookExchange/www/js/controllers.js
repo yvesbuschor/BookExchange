@@ -60,8 +60,28 @@ angular.module('bookexchange')
 
 .controller('MybookCtrl', function($scope, $stateParams) {
   $scope.book = {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/300x100"};
-});
+})
+
 
 .controller('SearchCtrl', function($scope) {
-  
+  $scope.search_term = "";
+  $scope.search_by = "";
+  $scope.search_by_author = function () {
+	  $scope.search_by = author;}
+  $scope.search_by_titel = function () {
+	  $scope.search_by = titel;}
+  $scope.search = function(search_term){
+	if("search_by" == author){
+		for (var i=1; i<mybooks.length; i++){
+			if(mybooks[i].author==search_term){
+				{{"It's a match!"}} return mybook[i].isbn && mybook[i].author && mybook[i].titel;
+			}}}
+	else if("search_by" == title){	
+		for (i=1; i<mybooks.length; i++){
+			if(mybooks[i].titel==search_term){
+				{{"It's a match!"}} return mybook[i].isbn && mybook[i].author && mybook[i].titel;
+			}
+		}	
+	}
+  }
 });
