@@ -1,5 +1,9 @@
-<ion-view view-title="Booktitle">
+<ion-view view-title="{{book.title}}">
   <ion-content>
-    <h1>Booktitle</h1>
+  <div class="bookinfo">
+  <div class="center"><img ng-src="{{book.image}}" alt="{{book.title}}"></div>
+    <h1 class="center">{{book.title}}</h1>
+    <h2 class="center">{{book.author}}</h2>
+  </div>
   </ion-content>
 </ion-view>
