@@ -46,7 +46,8 @@ angular.module('bookexchange', ['ionic'])
       url: '/newbook',
       views: {
         'menuContent': {
-          templateUrl: 'templates/newbook.html'
+          templateUrl: 'templates/newbook.html',
+          controller: 'NewBook'
         }
       }
     })

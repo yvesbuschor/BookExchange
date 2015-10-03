@@ -62,6 +62,12 @@ angular.module('bookexchange')
   $scope.book = {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/300x100"};
 })
 
+.controller('NewBook', function($scope, $stateParams) {
+  $scope.book = {"id":3,"isbn":"","title":"Title.input","author":"Author.input","qualitiy":"data.qualitiy_select","status":"data.status_select","price":"price.input","prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/300x100"};
+	$scope.issell = ("data.status_select"=="sell");
+	
+
+})
 
 .controller('SearchCtrl', function($scope) {
   $scope.search_term = {};
