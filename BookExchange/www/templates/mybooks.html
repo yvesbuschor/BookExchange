@@ -1,0 +1,24 @@
+<ion-view view-title="My Books">
+  <ion-content>
+      <div class="list">
+
+        <a ng-repeat="book in mybooks" 
+           href="#/app/mybooks/{{book.id}}"
+           class="item item-thumbnail-right">
+
+          <img ng-src="{{ book.image }}">
+
+          <h2>{{ book.title }}</h2>
+          <h3>{{ book.author }}</h3>
+        </a>
+
+      </div>
+
+    <ion-list>
+      <ion-item ng-repeat="book in mybooks" href="#/app/mybooks/{{book.id}}" class="listitem">
+        <h1>{{book.title}}</h1>
+        {{book.author}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

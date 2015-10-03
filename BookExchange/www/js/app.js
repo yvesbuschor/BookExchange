@@ -41,33 +41,33 @@ angular.module('bookexchange', ['ionic'])
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.newbook', {
+      url: '/newbook',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/newbook.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.mybooks', {
+      url: '/mybooks',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/mybooks.html',
+          controller: 'MybooksCtrl'
         }
       }
     })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/mybooks/:bookId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/mybook.html',
+        controller: 'MybookCtrl'
       }
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/search');
 });

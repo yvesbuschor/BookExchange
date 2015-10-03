@@ -41,16 +41,22 @@ angular.module('bookexchange')
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('MybooksCtrl', function($scope) {
+  $scope.mybooks = [
+    {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":4,"isbn":"1235","title":"fdsa","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":5,"isbn":"96879876","title":"lkjh","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":4,"isbn":"1235","title":"fdsa","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":5,"isbn":"96879876","title":"lkjh","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":4,"isbn":"1235","title":"fdsa","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":5,"isbn":"96879876","title":"lkjh","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":4,"isbn":"1235","title":"fdsa","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"},
+    {"id":5,"isbn":"96879876","title":"lkjh","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/80x80"}
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('MybookCtrl', function($scope, $stateParams) {
 });
