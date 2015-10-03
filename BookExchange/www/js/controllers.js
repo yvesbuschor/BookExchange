@@ -59,4 +59,9 @@ angular.module('bookexchange')
 })
 
 .controller('MybookCtrl', function($scope, $stateParams) {
+  $scope.book = {"id":3,"isbn":"1234","title":"asdf","author":"qewr","qualitiy":"broken","status":"sell","price":null,"prixFix":null,"away":null,"deleted":null,"image":"http://placehold.it/300x100"};
+});
+
+.controller('SearchCtrl', function($scope) {
+  
 });
