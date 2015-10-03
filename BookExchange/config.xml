@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.bookexchange934672" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>BookExchange</name>
   <description>
-        An Ionic Framework and Cordova project.
+        sell, lend or give away your books.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="yb@yvesbuschor.com" href="http://yvesbuschor.com/">
+      HackZurich 15 - Felix, Valentin, Yves
     </author>
   <content src="index.html"/>
   <access origin="*"/>

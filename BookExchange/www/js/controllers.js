@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('bookexchange')
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
