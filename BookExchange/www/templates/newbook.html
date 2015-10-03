@@ -1,50 +1,56 @@
 <ion-view view-title="New Book">
   <ion-content>
-    <h1>New Book</h1>
-    
-       <!-- //ISBN shall be scanned anyway-->
-       
-       <!-- //Author.input -->
-       <span class="input-label">Author: </span>
-          <input type="text" ng-model="Author.input"><br><br>
+	  <div class="list">
+		<h1>New Book</h1>
 		
-		<!-- //Title.input -->
-		<span class="input-label">Title:   </span>
-          <input type="text" ng-model="Title.input"><br>
+		   <!-- //ISBN shall be scanned anyway-->
+		   
+		   <!-- //Author.input -->
+		   <label class="item item-input item-floating-label">
+		   <span class="input-label">Author: </span>
+			  <input type="text" ng-model="Author.input"><br><br>
+			</label>
+			
+			<!-- //Title.input -->
+			<label class="item item-input item-floating-label">
+			<span class="input-label">Title:   </span>
+			  <input type="text" ng-model="Title.input"><br>
+			</label>
+			
+			
+			<!-- State selection -->
+			<label class="item item-input item-select">
+				<div class="input-label">
+			<br>State:  <select name="qualitiy_select" ng-model="data.qualitiy_select">
+			<option value="new">New</option>
+			<option value="used">Used</option>
+			<option value="broken">Heavily used</option>
+			</select><br>
+			
+			<br>Type of prestation :  <select name="status_select" ng-model="data.status_select">
+			<option value="free">Free</option>
+			<option value="borrow">Lending</option>
+			<option value="sell">Sell</option>
+			</select><br>
+			<h3 ng-show="issell"><span class="input-label">Price: </span>
+				<input type="text" ng-model="price.input">
+			</h3>
+			</label>
 		
 		
-		<br>State:  <select name="qualitiy_select" ng-model="data.qualitiy_select">
-		<option value="new">New</option>
-		<option value="used">Used</option>
-		<option value="broken">Heavily used</option>
-		</select><br>
 		
-		<br>Type of prestation :  <select name="status_select" ng-model="data.status_select">
-		<option value="free">Free</option>
-		<option value="borrow">Lending</option>
-		<option value="sell">Sell</option>
-		</select><br>
-		<h3 ng-show="issell()"><span class="input-label">Price: </span>
-			<input type="text" ng-model="price.input">
-		</h3>
 		
-    
-    
-    
-    
-		<!-- //Title.input -->
-		<span class="input-label">Description</span>
-          <input type="text" ng-model="Description.input">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+			<!-- //Description.input -->
+			<label class="item item-input item-floating-label">
+			<span class="input-label">Description</span>
+			  <input type="text" ng-model="Description.input">
+			</label><br><br>
+			
+			<button class="button button-positive">
+				Create
+			</button>
+			   
+    </div>
     
   </ion-content>
 </ion-view>
